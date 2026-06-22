@@ -27,6 +27,16 @@ A nominator is a TAO holder who stakes with a validator in Bittensor delegation 
 The term names the supplying side of the staking relationship. It should be read separately from the
 validator role that receives delegated stake and performs validation work.
 
+In plain language, nominator answers: who is supplying delegated TAO to a validator? It is not the
+validator performing the evaluation work, and it is not a subnet miner producing task output. The
+nominator is the holder choosing to attach TAO support to a validator's position
+([Glossary: Nominator](https://docs.learnbittensor.org/resources/glossary#nominator)).
+
+For a reader, the nominator role is most clearly understood through the action it takes. A nominator
+nominates — that is, stakes delegated TAO with a validator. The nomination creates the staking
+relationship; the resulting delegated stake is recorded as part of the validator's stake context
+([Staking and delegation overview](https://docs.learnbittensor.org/staking-and-delegation/delegation)).
+
 ## Delegation Role
 
 In Bittensor staking vocabulary, a nominator supplies TAO support to a validator. A delegate is the
@@ -36,6 +46,12 @@ receiving validator role, while a nominator is the holder role supplying delegat
 
 This keeps the relationship clear: nominator names the TAO-holder role, nominate names the staking
 action, and delegate names the receiving validator role.
+
+The three terms work together: a nominator nominates a delegate. That sentence covers all three
+roles — who does the staking, the action taken, and who receives the support. Keeping them separate
+avoids using nominator and delegate as synonyms when they name opposite ends of the relationship
+([Glossary: Delegate](https://docs.learnbittensor.org/resources/glossary#delegate),
+[Glossary: Nominate](https://docs.learnbittensor.org/resources/glossary#nominate)).
 
 ## Nominate and Stake Context
 
@@ -69,6 +85,20 @@ documentation distinguishes validator dividends and staking roles from miner inc
 
 That does not make nominator a reward quote or validator ranking term. It names the role that
 supplies delegated TAO support; dividends are an outcome term in the emission system.
+
+## Validator Take Context
+
+Validator take is the share of staking-related proceeds that a delegate retains before distributing
+the remainder to nominators. The validator take percentage is a property of the delegate, not the
+nominator — but it affects how much of the staking return flows back to nominators who have
+delegated their TAO to that validator
+([Glossary: Validator Take %](https://docs.learnbittensor.org/resources/glossary#validator-take-),
+[Staking and delegation overview](https://docs.learnbittensor.org/staking-and-delegation/delegation)).
+
+For readers, this means the nominator's effective outcome depends on which delegate they chose. A
+nominator comparing two validators should distinguish between how well the validator performs and
+what take percentage the validator charges. Nominator names the role; delegate, take, and emissions
+describe the surrounding vocabulary that shapes the return.
 
 ## Scope Boundaries
 
