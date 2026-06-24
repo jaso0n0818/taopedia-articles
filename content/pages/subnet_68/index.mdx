@@ -100,15 +100,20 @@ subnet's accumulated emission each tempo.
 
 Subnet 68 NOVA should not be read as generic Bittensor subnet documentation, a clinical diagnosis
 tool, or proof that any proposed molecule is safe or effective in humans. It describes an
-early-stage drug-discovery competition where miners submit candidate small molecules or
-nanobody-like sequences for rotating target proteins, and validators apply validity checks before
-scoring binding affinity with machine-learning models
+early-stage drug-discovery competition where miners submit target-specific candidates and validators
+gate and score submissions under validator-controlled rules
 ([NOVA miner documentation](https://raw.githubusercontent.com/metanova-labs/nova/main/docs/MINER.md),
 [NOVA validator documentation](https://raw.githubusercontent.com/metanova-labs/nova/main/docs/VALIDATOR.md)).
 
-It is also not a free-form molecule list generator. Rewards are tied to target-specific candidates
-that survive the validator gate-and-score pipeline, with validator weights flowing through Yuma
-Consensus to determine emissions each tempo
+Two scope boundaries matter for interpretation. First, miners commit submissions before scoring and
+the docs describe encryption until reveal, which is meant to reduce copying and keep competition on
+candidate quality rather than timing
+([NOVA miner documentation](https://raw.githubusercontent.com/metanova-labs/nova/main/docs/MINER.md)).
+Second, “bind strongly” is a scoring proxy: the validator docs describe model-based ranking, not
+wet-lab assay confirmation of winners
+([NOVA validator documentation](https://raw.githubusercontent.com/metanova-labs/nova/main/docs/VALIDATOR.md)).
+
+Validator weights still flow through Yuma Consensus to determine emissions each tempo
 ([Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus),
 [Emission](https://docs.learnbittensor.org/learn/emissions)).
 
